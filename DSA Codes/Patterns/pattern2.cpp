@@ -4,23 +4,16 @@ using namespace std;
 int main()
 {
     /*
-        *****
-        *****
-        *****
+        1
+        1 2
+        1 _ 3
+        1 _ _ 4
+        1 2 3 4 5
     */
     
-    int row;
-    int col;
-    cout<<"No of rows :";
-    cin>>row;
-    cout<<"No of Columns :";
-    cin>>col;
+    int n;
+    cin >> n;
 
-    for(int i =0;i<row;i++){
-        for(int j = 0; j<col; j++){
-            cout<<"* ";
-        }
-        cout<<endl;
-    }
+    
     return 0;
 }

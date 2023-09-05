@@ -4,24 +4,49 @@ using namespace std;
 int main()
 {
     /*
-        ****
-        ****
-        ****
-        ****
+    * * * *   * * * * 
+    * * *       * * * 
+    * *           * * 
+    *               * 
+    *               * 
+    * *           * * 
+    * * *       * * * 
+    * * * *  *  * * * 
     */
-    // How to Approch pattern  
-    // 1. find no of row  -> 4
-    // 2. write down for each row
-    //          row 1 = 4 star
-    //          row 2 = 4 star
-    //          row 3 = 4 star
-    //          row 4 = 4 star
-
+    
     int num;
-    cin>>num;
 
-    for(int i =0;i<num;i++){
-        for(int j = 0; j<num; j++){
+    cin >> num;
+    int n = num/2;
+
+    for(int row = 0 ; row < n ; row++){
+        //Inverted pyramid 1
+        for(int col=0;col<n-row;col++){
+            cout<<"* ";
+        }
+        //full pyramid
+        for(int col = 0;col<2*row+1; col++){
+            cout<<"  ";
+        }
+
+        //Inverted pyramid 2
+        for(int col=0;col<n-row;col++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+    for(int row = 0 ; row < n ; row++){
+        //Inverted pyramid 1
+        for(int col=0;col<row + 1;col++){
+            cout<<"* ";
+        }
+        //full pyramid
+        for(int col = 0;col<(2*n) - (2*row) - 1; col++){
+            cout<<"  ";
+        }
+
+        //Inverted pyramid 2
+        for(int col=0;col<row + 1;col++){
             cout<<"* ";
         }
         cout<<endl;
